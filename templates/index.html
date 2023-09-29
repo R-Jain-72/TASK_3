@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}       
+<center>
+    <h1 class="rounded-top">WORD COUNTER 2000</h1>
+    <form action="/" method="POST">
+        <center><textarea class='bg-black text-white' name="text" rows="10" cols="50"></textarea></center>
+        <input class="btn btn-dark" type="submit" value="Count Words">
+    </form>
+    <br>
+    {% if word_count %}
+        <strong><p>Number of Words:{{ word_count }}</p></strong>
+    {% endif %}
+</center>
+</body>
+</html>
+
+
+{% endblock %}
